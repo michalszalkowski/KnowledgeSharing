@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<a class="btn btn-success" href="#/documentsPopulate">Create 10 documents</a>
+
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>#</th>
+		<th>name</th>
+		<th>desc</th>
+		<th>type</th>
+		<th>category</th>
+		<th>action</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="(key, doc) in documents">
+		<td>{{key}}</td>
+		<td>{{doc.name}}</td>
+		<td>{{doc.desc}}</td>
+		<td>{{doc.type}}</td>
+		<td>{{doc.category}}</td>
+		<td><a href="#/document/{{key}}">details</a></td>
+	</tr>
+	</tbody>
+</table>

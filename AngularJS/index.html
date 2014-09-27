@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sk">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Michał Szałkowski">
+
+	<title>Angular 4 JAVA [Knowledge Share]</title>
+	<link href="./bower/bootstrap/dist/css/bootstrap.min.css"/>
+	<link href="bower/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="app/base/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<section>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Project name</a>
+			</div>
+			<div class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav">
+					<li><a href="#/home">home</a></li>
+					<li><a href="#/about">about</a></li>
+					<li><a href="#/documents">documents</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<main ng-view></main>
+	</div>
+</section>
+
+<footer>
+	<div class="container">
+		<p>&copy; Company 2014</p>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="./bower/angular/angular.min.js"></script>
+<script src="./bower/angular-route/angular-route.min.js"></script>
+<script src="./bower/angular-resource/angular-resource.min.js"></script>
+
+<script src="./app/components/document/document.js"></script>
+<script src="./app/components/document/storage.js"></script>
+
+<script src="./app/base/app.js"></script>
+<script src="./app/base/controller.js"></script>
+<script src="./app/base/service.js"></script>
+<script src="./app/base/filter.js"></script>
+
+
+</body>
+</html>
