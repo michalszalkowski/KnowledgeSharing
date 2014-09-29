@@ -6,6 +6,7 @@ module.exports.all = function () {
 
 module.exports.add = function (document) {
 	var id = Date.now();
+	document._id = id;
 	storage[id] = document;
 	return id;
 };

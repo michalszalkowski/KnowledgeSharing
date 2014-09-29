@@ -31,7 +31,7 @@ public class DocumentController {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Long create(Map<String, Object> document) {
+	public Map<String, Object> create(Map<String, Object> document) {
 		return documentStorage.add(document);
 	}
 

@@ -15,11 +15,14 @@ public class DocumentStorage implements Serializable {
 		return storage;
 	}
 
-	public long add(Map<String, Object> document) {
+	public Map<String, Object> add(Map<String, Object> document) {
 		long id = new Date().getTime();
 		document.put("_id", id);
 		storage.put(id, document);
-		return id;
+
+		Map<String, Object> response = new HashMap<>();
+		response.put("_id", id);
+		return response;
 	}
 
 	public Map<String, Object> one(Long id) {

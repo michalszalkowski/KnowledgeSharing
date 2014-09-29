@@ -16,7 +16,7 @@ module.exports.init = function () {
 
 	routerApi.route('/').post(function (req, res) {
 		var id = DocumentStorage.add(req.body);
-		res.json({id: id});
+		res.json({_id: id});
 	});
 
 	routerApi.route('/:id').put(function (req, res) {
