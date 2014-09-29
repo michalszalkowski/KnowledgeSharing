@@ -17,28 +17,28 @@ public class DocumentController {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Map<Long, Map<String, String>> list() {
+	public Map<Long, Map<String, Object>> list() {
 		return documentStorage.all();
 	}
 
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Map<String, String> one(@PathParam("id") Long id) {
+	public Map<String, Object> one(@PathParam("id") Long id) {
 		return documentStorage.one(id);
 	}
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Long create(Map<String, String> document) {
+	public Long create(Map<String, Object> document) {
 		return documentStorage.add(document);
 	}
 
 	@PUT
 	@Path("{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void update(@PathParam("id") Long id, Map<String, String> document) {
+	public void update(@PathParam("id") Long id, Map<String, Object> document) {
 		documentStorage.update(id, document);
 	}
 

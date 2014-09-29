@@ -9,23 +9,24 @@ import java.util.Map;
 @Singleton
 public class DocumentStorage implements Serializable {
 
-	private Map<Long, Map<String, String>> storage = new HashMap<>();
+	private Map<Long, Map<String, Object>> storage = new HashMap<>();
 
-	public Map<Long, Map<String, String>> all() {
+	public Map<Long, Map<String, Object>> all() {
 		return storage;
 	}
 
-	public long add(Map<String, String> document) {
+	public long add(Map<String, Object> document) {
 		long id = new Date().getTime();
+		document.put("_id", id);
 		storage.put(id, document);
 		return id;
 	}
 
-	public Map<String, String> one(Long id) {
+	public Map<String, Object> one(Long id) {
 		return storage.get(id);
 	}
 
-	public void update(long id, Map<String, String> document) {
+	public void update(long id, Map<String, Object> document) {
 		storage.put(id, document);
 	}
 
